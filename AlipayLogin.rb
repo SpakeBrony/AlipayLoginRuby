@@ -129,7 +129,6 @@ def zfb_login
         return render json: Result.new(1111, '登录失败', ''), status: 200
       end
     rescue Exception => err
-      logger.error "解锁音乐包错误:#{err.message}"
       return render json: {code: 4444, msg: '服务错误' + err.message}, status: 200
     end
   end
